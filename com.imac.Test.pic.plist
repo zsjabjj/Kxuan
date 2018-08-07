@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.imac.Test.pic.plist</string>
+    <key>ProgramArguments</key>
+    <array> 
+		<string>/Users/tiger007/Desktop/shell_test/Scripts/pic.sh</string>
+    </array>
+    <key>StartCalendarInterval</key>
+    <array>
+        <dict>
+            <key>Minute</key>
+            <integer>45</integer>
+            <key>Hour</key>
+            <integer>9</integer>
+        </dict>
+        <dict>
+            <key>Minute</key>
+            <integer>5</integer>
+            <key>Hour</key>
+            <integer>17</integer>
+        </dict>
+    </array>
+    <key>StandardOutPath</key>
+    <string>/Users/tiger007/Desktop/shell_test/Scripts/piclog</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/tiger007/Desktop/shell_test/Scripts/picerror</string>
+</dict>
+</plist>
