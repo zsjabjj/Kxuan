@@ -135,12 +135,15 @@ class RiceTmallSpider(scrapy.Spider):
 
         # 提取数据
         for item in jsonp['srp']:
+            # 移动端替换成pc端url
+            detailUrl = re.sub(r'\.m', '', item['url'])
             item_dict = dict()
             item_dict['device_category'] = response.meta['device_category']
             item_dict['item_price'] = item['price']
             item_dict['month_sold_list'] = item['sold']
             item_dict['item_title'] = item['title']
-            item_dict['detail_url'] = 'https:' + item['url']
+            # item_dict['detail_url'] = 'https:' + item['url']
+            item_dict['detail_url'] = 'https:' + detailUrl
             item_dict['pic_url'] = 'https:' + item['img']
             item_dict['item_nid'] = item['nid']
             item_dict['reserve_price'] = item['reservePrice']
